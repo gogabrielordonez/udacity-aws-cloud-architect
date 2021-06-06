@@ -1,22 +1,40 @@
-### Task 2: Calculate Infrastructure Costs
+### Task 1: Create AWS Architecture Schematics
 
-1.  Use the [AWS Pricing Calculator](https://calculator.aws/#/) to estimate how much it will cost to run the services in your Part 1 diagram for one month.
-    
-    -   Target a monthly estimate between $8,000-$10,000.
-    -   Be mindful of AWS regions when you are estimating costs.
-    -   Export the estimate as a CSV file named `Initial_Cost_Estimate.csv`.
+#### Part 1
 
-![[Initial_Cost_Estimate 1.csv]]
+You have been asked to plan and provision a cost-effective AWS infrastructure for a new social media application development project for 50,000 single-region users. The project requires the following AWS infrastructure and services. Please include your name and label all elements of the infrastructure on the diagram.
+
+-   Infrastructure in the following regions: `us-east-1`
+-   Users and Client machines
+-   One VPC
+-   Two Availability Zones
+-   Four Subnets (2 Public, 2 Private)
+-   A NAT Gateway
+-   A CloudFront distribution with an S3 bucket
+-   Web servers in the Public Subnets sized according to your usage estimates
+-   Application Servers in the Private Subnets sized according to your usage estimates
+-   DB Servers in the Private Subnets
+-   Web Servers Load Balanced and Autoscaled
+-   Application Servers Load Balanced and Autoscaled
+-   A Master DB in AZ1 with a read replica in AZ2
+
+Use [LucidChart](https://www.lucidchart.com/) or a similar diagramming application to create your schematic. Export your schematic as a PDF and save as `Udacity_Diagram_1.pdf`.
+
+![[Udacity_Diagram_1.pdf]]
 
 
-2.  Return to the [AWS Pricing Calculator](https://calculator.aws/#/) and reconfigure your estimates for the following scenarios:
-    
-    -   Your budget has been reduced from $8,000-$10,000 to a maximum of $6,500. What services will you modify to meet this new budget? Export the updated costs in a CSV file named `Reduced_Cost_Estimate.csv` and write up a brief narrative of the changes you made in the CSV file below the cost estimate.
-    -   ![[Reduced_Cost_Estimate 1.csv]]
- 
-		
-		
-    -   Your budget has been increased to $20,000. What resources will you add and why?  
-        Think about where to add redundancy and how to improve performance. Re-configure your estimate to a monthly invoice of $18K-20K. Export the updated costs to a CSV file named `Increased_Cost Estimate.csv` and write up a brief narrative of the changes you made in the CSV file below the cost estimate.
-        
-		![[Increased_Cost Estimate.csv]]
+#### Part 2
+
+You have been asked to plan a SERVERLESS architecture schematic for a new application development project. The project requires the following AWS infrastructure and services.
+
+-   A user and client machine
+-   AWS Route 53
+-   A CloudFront Distribution
+-   AWS Cognito
+-   AWS Lambda
+-   API Gateway
+-   DynamoDB
+-   S3 Storage
+
+Export your schematic as a PDF and save as `Udacity_Diagram_2.pdf`
+![[Udacity_Diagram_2.pdf]]
