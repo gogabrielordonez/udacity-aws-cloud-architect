@@ -18,6 +18,9 @@
 5. Use Terraform to  delete the 2 m4.large instances 
 6. Take an updated screenshot of the AWS console showing only the 4 t2.micro instances and save it as `Terraform_1_2`
 
+Answer:
+[Terraform_1_1](/Part 1/Terraform_1_1.png)
+
 ### Exercise 2  (Part 2 folder)
 
 1. In the  Exercise_2 folder, write the code to deploy an AWS Lambda Function using Terraform. Your code should include:
