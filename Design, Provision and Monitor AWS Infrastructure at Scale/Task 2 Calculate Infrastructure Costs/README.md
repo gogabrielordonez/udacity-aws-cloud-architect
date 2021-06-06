@@ -7,7 +7,7 @@
     -   Export the estimate as a CSV file named `Initial_Cost_Estimate.csv`.
 
 Answer:
-[Initial cost Estimate(Initial_Cost_Estimate.csv)
+[Initial cost Estimate](Initial_Cost_Estimate.csv)
 
 
 
@@ -17,7 +17,7 @@ Answer:
 
 
 Answer:
-[Reduced cost Estimate(Reduced_Cost_Estimate.csv)
+[Reduced cost Estimate](Reduced_Cost_Estimate.csv)
 
 		
 		
@@ -25,4 +25,4 @@ Answer:
         Think about where to add redundancy and how to improve performance. Re-configure your estimate to a monthly invoice of $18K-20K. Export the updated costs to a CSV file named `Increased_Cost Estimate.csv` and write up a brief narrative of the changes you made in the CSV file below the cost estimate.
         
 Answer:
-[Increased cost Estimate(Increased_Cost_Estimate.csv)
+[Increased cost Estimate](Increased_Cost_Estimate.csv)
