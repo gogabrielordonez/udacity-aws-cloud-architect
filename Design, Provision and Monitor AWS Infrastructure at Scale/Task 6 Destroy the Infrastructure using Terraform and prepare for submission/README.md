@@ -4,3 +4,5 @@
 2.  Take a screenshot of the EC2 instances page and label it `Terraform_destroyed.png` or `Terraform_destroyed.jpg` .
 3.  Upload Terraform files, screenshots, schematics and CSV files to your GitHub repo
 
+Answer:
+[Terraform_destroyed](Terraform_destroyed.PNG)
