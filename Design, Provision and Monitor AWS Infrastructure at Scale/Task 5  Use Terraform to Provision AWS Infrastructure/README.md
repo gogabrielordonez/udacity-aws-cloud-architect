@@ -18,8 +18,7 @@
 5. Use Terraform to  delete the 2 m4.large instances 
 6. Take an updated screenshot of the AWS console showing only the 4 t2.micro instances and save it as `Terraform_1_2`
 
-Answer:
-[Terraform_1_1](udacity-aws-cloud-architect/Design, Provision and Monitor AWS Infrastructure at Scale/Task 5 Use Terraform to Provision AWS Infrastructure/Part 1/Terraform_1_1.png)
+Answers in each folder.
 
 ### Exercise 2  (Part 2 folder)
 
@@ -32,3 +31,5 @@ Answer:
   
 2. Take a screenshot of the EC2 instances page
 3. Take a screenshot of the VPC page 
+
+Answers in each folder.
