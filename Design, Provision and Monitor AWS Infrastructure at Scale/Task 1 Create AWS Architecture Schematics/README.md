@@ -21,7 +21,7 @@ You have been asked to plan and provision a cost-effective AWS infrastructure fo
 Use [LucidChart](https://www.lucidchart.com/) or a similar diagramming application to create your schematic. Export your schematic as a PDF and save as `Udacity_Diagram_1.pdf`.
 
 Answer:
-[Udacity_Diagram_1.pdf](Diagram_1.pdf)
+[Udacity_Diagram_1.pdf](Udacity_Diagram_1.pdf)
 
 
 #### Part 2
@@ -40,4 +40,4 @@ You have been asked to plan a SERVERLESS architecture schematic for a new applic
 Export your schematic as a PDF and save as `Udacity_Diagram_2.pdf`
 
 Answer:
-[Udacity_Diagram_2.pdf](Diagram_2.pdf)
+[Udacity_Diagram_2.pdf](Udacity_Diagram_2.pdf)
