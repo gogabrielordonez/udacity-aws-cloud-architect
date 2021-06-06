@@ -14,3 +14,5 @@ You will also need user accounts for AWS and Terraform.
 #### Permissions
 
 The tasks carried out for this project should be carried out by a user logged in with the IAM role of Administrator with access to Billing information. You can learn more about setting up a user with the Admin role here: [Creating Your First Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
+
+## Please navegate in folders to see the detailed taks and answers
