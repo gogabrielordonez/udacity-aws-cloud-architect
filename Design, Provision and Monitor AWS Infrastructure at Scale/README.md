@@ -1,31 +1,16 @@
-# Cloud Developer ND Course 2: Design for Performance and Scalability
+## Design, Provision and Monitor AWS Infrastructure at Scale
 
----
+In this project, you will plan, design, provision, and monitor infrastructure in AWS using industry-standard and open source tools. You will practice the skills you have learned throughout the course to optimize infrastructure for cost and performance. You will also use Terraform to provision and configure AWS services in a global configuration.
 
-## Project  Instructions
+### Before you get started
 
-### Exercise 1
+Confirm that you have installed the required tooling for this project:
 
-1. Download the [starter code](https://github.com/udacity/cand-c2-project).
-2. In the main.tf file write the code to provision
-   * AWS as the cloud provider
-   * Use an existing VPC ID
-   * Use an existing public subnet
-   * 4 AWS t2.micro EC2 instances named Udacity T2
-   * 2 m4.large EC2 instances named Udacity M4
-3. Run Terraform. 
-4. Take a screenshot of the 6 EC2 instances in the AWS console and save it as `Terraform_1_1`. 
-5. Use Terraform to  delete the 2 m4.large instances 
-6. Take an updated screenshot of the AWS console showing only the 4 t2.micro instances and save it as `Terraform_1_2`
+-   [AWS CLI](https://aws.amazon.com/cli/)
+-   [Terraform](https://www.terraform.io/)
 
-### Exercise 2
+You will also need user accounts for AWS and Terraform.
 
-1. In the  Exercise_2 folder, write the code to deploy an AWS Lambda Function using Terraform. Your code should include:
+#### Permissions
 
-   * A lambda.py file
-   * A main.tf file with AWS as the provider, and IAM role for Lambda, a VPC, and a public subnet
-   * An outputs.tf file
-   * A variables.tf file with an AWS region
-  
-2. Take a screenshot of the EC2 instances page
-3. Take a screenshot of the VPC page 
+The tasks carried out for this project should be carried out by a user logged in with the IAM role of Administrator with access to Billing information. You can learn more about setting up a user with the Admin role here: [Creating Your First Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
