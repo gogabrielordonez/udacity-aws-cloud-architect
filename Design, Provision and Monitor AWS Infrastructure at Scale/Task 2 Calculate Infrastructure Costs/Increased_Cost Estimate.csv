@@ -1,0 +1,25 @@
+﻿Region,Service,Monthly,First 12 months total,Currency,Configuration summary
+US East (N. Virginia),Amazon EC2,1493.66,17923.92,USD,"Operating system (Linux), Quantity (12), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (30 GB), Instance type (t3.xlarge) ON DEMMAND"
+US East (N. Virginia),Amazon EC2,1525.2,18302.4,USD,"Operating system (Linux), Quantity (12), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (30 GB), Instance type (c5.xlarge) ON DEMMAND"
+US East (N. Virginia),Amazon RDS for PostgreSQL,4462.58,53550.96,USD,"Quantity (2), Storage volume (General Purpose SSD (gp2)), Storage amount (300 GB per month + 300GB for backup per month), Instance type (db.m5.xlarge) ON DEMMAND"
+US East (N. Virginia),Amazon Route 53,1876.1,22513.2,USD,"Hosted Zones (1), estándar querys (1 million per month), Number of Elastic Network Interfaces (20)"
+US East (N. Virginia),S3 Standard,1125.91,13510.92,USD,"S3 Standard storage (10000 GB per month) PUT, COPY, POST, LIST requests to S3 Standard (1000000) GET, SELECT, and all other requests from S3 Standard (1000000) Data returned by S3 Select (100 GB per month) Data scanned by S3 Select (1000GB per month) Inbound Data Transfer (1 TB per month) Outbound Data Transfer (1TB per month)"
+US East (N. Virginia),Amazon Virtual Private Cloud (VPC),1865.7,22388.4,USD,Number of NAT Gateways (3) Data Processed per NAT Gateway (20000GB per month)
+US East (N. Virginia),Elastic Load Balancing,874.58,10494.96,USD,Number of Application Load Balancers (1) in AWS Region. Processed bytes (EC2 Instances and IP addresses as targets) (20000 GB per month) Average number of new connections per ALB (200 per second) Average connection duration (60 seconds) Average number of requests per second per ALB (20) Average number of rule evaluations per request (4)
+US East (N. Virginia),Elastic Load Balancing,1438.28,17259.36,USD,"Number of Network Load Balancers (1), Processed bytes per NLB for TCP (200 GB per hour), Processed bytes per NLB for TLS (100 GB per hour), Average number of new TLS connections (10 per second), Average TLS connection duration (30 seconds)"
+US East (N. Virginia),Amazon CloudWatch,259.54,3114.48,USD,GetMetricData: Number of metrics requested (864000) Standard Logs: Data Ingested (2GB) Logs Delivered to S3: Data Ingested (2GB) Expected Logs Data scanned (20GB) Number of Custom/Cross-account events (20) Number of Dashboards (20)  Number of High Resolution Alarm Metrics (100) 
+,CloudFront,1084.25,13011,USD,Total Outbound traffic (20 TB per month): Average cost for all region is used (0.1058 per GB per month)
+,,,,,
+,Total,16005.8,192069.6,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,In order to increase budget:
+,,,,,"- I changed quantity of EC2 instances from 6 to 12, for web and application servers. Also I change to c5.xlarge an t3.xlarge to increase performance for more traffic."
+,,,,,"- I changed quantity of RDS instances from 1 to 2, increasing redundancy to one master in each AZ"
+,,,,,- I changed quantity of ENI from 10 to 20 and standard querys to 1 million per month
+,,,,,- I changed quantity of NAT Gateway in VPC  from 1 to 2 (one in each AZ) and the traffic load from 10000 per month to 20000 per month
+,,,,,- I increased the quantity of traffic processed by ELB for the Application load balancer and network load balancer
+,,,,,- I increased the quantity of traffic processed by CloudFront
+,,,,,- I increased the quantity of metrics in CloudWatch
