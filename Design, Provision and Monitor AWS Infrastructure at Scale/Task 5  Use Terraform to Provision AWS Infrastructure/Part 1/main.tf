@@ -12,6 +12,9 @@ provider "aws" {
 resource "aws_instance" "UdacityT2" {
   ami           = "ami-07fde2ae86109a2af" # Amazon ECS-Optimized Amazon Linux 2 AMI
   instance_type = "t2.micro"
+  tags = {
+    Name = "Udacity T2"
+  }
   count         = 4
 }
 
@@ -20,5 +23,8 @@ resource "aws_instance" "UdacityT2" {
 resource "aws_instance" "UdacityM4" {
   ami           = "ami-07fde2ae86109a2af" # Amazon ECS-Optimized Amazon Linux 2 AMI
   instance_type = "m4.large"
+  tags = {
+    Name = "Udacity M4"
+  }
   count         = 2
 }
