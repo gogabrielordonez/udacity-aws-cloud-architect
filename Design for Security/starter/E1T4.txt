@@ -1,0 +1,18 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+Regarding VPC:
+It's a good practice not to add public internet routes within the main route table. In the diagram, subnets are not associated explicitly with any route table. Instead, we can create another route table for public internet access and add our public subnets there.
+In this way, we can reduce the risks of capturing IP traffic in the network interfaces at our VPC.
+
+Regarding EC2:
+The deployed web servers in the public subnet. An interesting option to improve the security is to move the Web server instances to the private subnet. It will require a NAT gateway to allow communication from the internet to the web servers.
+The WebAppSG security group should be open to a different port than port 80. Should deny all connections in ports not required for web service.
+
+Regarding Internet gateway:
+There is three internet gateway on the same VPC. We can only implement one in the VPC, and we must configure it properly with different route tables for public and private subnets. 
+
+Regarding user access:
+It seems like the IAM role is allowing access to S3 buckets. The right policy must control the access role. This also must consider server-side encryption for the data in the S3 bucket for secret recipes.
+
+Regarding content distribution:
+Why is not using CloudFront CDN? This could improve the user experience and security. CloudFront distributions must be using improved security policies for HTTPS connections. Also, it is suggested that the traffic between the AWS CloudFront distributions and their origins is encrypted.
