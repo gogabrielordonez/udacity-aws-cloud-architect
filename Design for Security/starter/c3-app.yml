@@ -9,6 +9,7 @@ Parameters:
     Default: "ami-01fcf79ce78f46764"
   KeyPair:
     Type: String
+    Default: "vadenuevo"
     Description: "Name of an existing KeyPair you will use to access the EC2 instances in this exercise. Be sure you have access to the private key file corresponding to this keypair."
 
 
