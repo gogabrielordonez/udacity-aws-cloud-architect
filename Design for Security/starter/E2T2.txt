@@ -1,3 +1,26 @@
-Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+Research and analyze which of the vulnerabilities appear to be related to the code deployed for the environment in this project.
+
+I am surprised by the number of security findings that I need to fix in my personal AWS account. The first challenge was to filter only the related to the code deployed for this project in Udacity :-)
+
+EC2 Security Group:
+1. Ensure no security groups allow ingress from 0.0.0.0/0 to port 22. Security groups provide stateful filtering of ingress/egress network traffic to AWS resources. 
+2. Ensure the default security group of every VPC restricts all traffic. A VPC comes with a default security group whose initial settings deny all inbound traffic, Allow all outbound traffic, and allow all traffic between instances assigned to the security group. If you don't specify a security group when you launch an instance, the instance is automatically assigned to this default security group. 
+3. Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389. Security groups provide stateful filtering of ingress/egress network traffic to AWS resources. 
+4. Ensure VPC flow logging is enabled in all VPCs. VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. 
+
+S3 Bucket:
+5. PCI.S3.4 S3 buckets should have server-side encryption enabled
+6. PCI.S3.5 S3 buckets should require requests to use Secure Socket Layer
+
+EC2 instances:
+7. EC2.8 EC2 instances should use Instance Metadata Service Version 2 (IMDSv2)
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+1. It is recommended that no security group allows unrestricted ingress access to port 22. The IP addresses of the incoming SSH traffic in the security groups (WebAppSG, default, and AttackInstanceSG ) aren't restricted. 
+2. It is recommended that the default security group restrict all traffic.
+3. It is recommended that no security group allows unrestricted ingress access to port 3389.
+4. It is recommended that VPC Flow Logs be enabled for packet "Rejects" for VPCs.
+5. Enable default encryption on an S3 bucket
+6. Update the permissions policy of the S3 bucket
+7. Configure your EC2 instance with IMDSv2
