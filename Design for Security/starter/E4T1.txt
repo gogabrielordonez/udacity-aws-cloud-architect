@@ -1,5 +1,15 @@
-
-
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+1. According to the documentation in GuardDuty, the finding related to brute force attacks aimed at obtaining passwords to SSH services can be remediated by securing your SSH port to only trusted IPs through Security Groups, ACLs, or firewalls.
+So, the first action must be to control the network access to the traffic related to the application server. To do this is suggested to update the security group which is assigned to the web application instance.
+
+2. The second action suggested, is to disable SSH password login on the application server. Doing this, there is no risk of accessing the webserver by ssh brute force attack from the internet.
+
+
+
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1. A good practice is to restrict the role capabilities in the instance profile, changing to allow access only to some specific S3 buckets and control the privilege of writing or reading data.
+
+2. Finally, as was understood during the simulation, there is not configured server-side encryption implemented in the S3 bucket. So it's necessary to configure that to prevent non-authorized access to the data.
