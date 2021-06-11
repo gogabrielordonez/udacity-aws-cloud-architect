@@ -1,3 +1,25 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
+AWS GuardDuty had 2 findings:
+
+i-0ea41658db379e3af is performing SSH brute force attacks against 10.192.10.117.
+Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+
+10.192.11.153 is performing SSH brute force attacks against i-0b33b3b5f2422493e.
+Brute force attacks are used to gain unauthorized access to your instance by guessing the SSH password.
+
+
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the following Data Sources: VPC flow logs, AWS CloudTrail management event logs, CloudTrail S3 data event logs, and DNS logs. 
+It uses sources of threat information, such as lists of malicious IP addresses and domains, and machine learning to identify the unexpected and potentially unauthorized activity as well as malicious activity in your AWS environment. 
+This can include issues such as privilege escalation, using exposed credentials, or communicating with malicious IP addresses or domains. 
+For example, GuardDuty can detect attacked EC2 instances serving malware or wanting bitcoins. 
+It also monitors the behavior of accessing the AWS account for signs of attack; For example, look for rogue infrastructure deployments, such as for instance deployment in a region that has never been used, or unusual API calls, such as changing passwords policy to reduce password complexity.
+
+
+This finding informs me that an EC2 the instance i-0ea41658db379e3af in my AWS environment was involved in a brute force attack aimed at obtaining passwords to SSH services on Linux-based systems. 
+This can indicate unauthorized access to my AWS resources. According to the documentation in GuardDuty, this finding can be remediated by securing your SSH port to only trusted IPs through Security Groups, ACLs, or firewalls.
+
+The information from GuardDuty includes very detailed information, for example, Network interfaces, Subnet ID, VPC ID, Security groups that could be very useful also for the remediation actions.
+Another important information provided is if the Unauthorized Access was achieved or not. In the exercise, after some minutes, I stopped the attack. This could be the reason why access was not achieved from the attack simulation server. 
