@@ -1,0 +1,26 @@
+As required by my reviewer (I didn't see it in any place of the project task instructions), and I ask why the reviewer considers there is not possible to assess my project without this file? There is no mention of file E5T1.txt in the Udacity project description as far as I can see.
+
+"We should add the name of the tool used for performing the operation at each and every step in our DevSecOpsPipeline. 
+You have explained all the tools in file E5T1.txt and you can make use of it to add all the tool details."
+
+Clarifying, this is the first time I edit the E5T1.txt file. So I didn't explain all the tools (this file didn't exist). 
+
+I think the reviewer was asking me to explain the tools that I should use to deploy my DevSecOpsPipeline. This is my try:
+
+I develop the idea of my DevSecOpsPipeline based on Accelera DevSecOpsPipeline  (https://accelera.com.au/what-the-sec-is-devsecops/)  but reducing all the security steps to those that have a sense for me for a "short and simple pipeline".
+
+I must highlight that not all the steps in the pipeline have a clear and specific tool to be performed, but a combination of those.
+
+In order to implement the DevSecOpsPipeline that I suggested, I should use AWS Codecommit, AWS Codepipeline, AWS CodeBuild for the code development, and Amazon Security Hub as a comprehensively view high priority security alerts and compliance status across all AWS accounts.
+
+With Security Hub, I have a single place to aggregate, organize, and prioritize security alerts, or results from multiple AWS services, such as Amazon GuardDuty, Amazon Inspector, and Amazon Macie, as well as those from security solutions. AWS partners.
+
+Some of these solutions outside AWS that also provide tools to implement the DevSecOpsPipeline suggested are:
+
+Komiser (https://komiser.io/)
+Komiser is a comprehensive inspection and analysis tool that helps you to monitor and control expenses for your AWS cloud platform. 
+
+AWStealth (https://github.com/cyberark/SkyArk/tree/master/AWStealth)
+AWStealth is a security that tool teams use to discover the most privileged entities in the AWS cloud environment.
+
+And so on...
