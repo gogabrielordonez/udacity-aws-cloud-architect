@@ -1,8 +1,16 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+1. I should set up the application load balancer with an HTTP listener rule that redirects HTTP requests to HTTPS.
+2. I should relocate the web application EC2 instance into a private subnet and use a NAT gateway to connect to the Internet or other AWS services, preventing the internet from initiating a connection with those instances.
+
 
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+Yes, I can restrict access to my Amazon S3 bucket using specific VPC endpoints. By doing this, definitely, I can prevent unauthorized access to the secrets bucket. I should update the policy code.
+
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+No, with Amazon S3 default encryption, I can set the default encryption behavior for an S3 bucket so that all new objects are encrypted when they are stored in the bucket. But the data that already exists must be reloaded to be encrypted. 
+
 
 # What would happen if the original cloud formation templates are applied to this environment.
+It would reset all the changes to the settings returning to the original CloudFormation templates configuration
